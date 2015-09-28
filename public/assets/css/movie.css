@@ -1,0 +1,8 @@
+.movieClass {
+	background-color: white;
+	/*position: relative;*/
+}
+.movieClass > div {
+	margin-top: 10px;
+	/*position: relative;*/
+}

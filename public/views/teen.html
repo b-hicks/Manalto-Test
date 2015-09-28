@@ -1,0 +1,12 @@
+<div class="row movieClass" ng-repeat="movies in data" ng-hide="movies[19] !== 'PG-13'">
+
+  <div class="col-sm-6">
+    <img src="http://www.acornnetworks.com/AcornImg/642.jpg" width="150" height="150">
+  </div>
+
+  <div class="col-sm-6">
+    <a href="#/details" ng-click="sendDetails(this.movies)"><h3>{{movies[9]| movieFil}}</h3></a> {{movies[19]}}
+    <br> {{movies[13] | dateFil}}
+  </div>
+
+</div>

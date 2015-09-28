@@ -1,0 +1,33 @@
+body{
+	background-image: url(../images/blue.jpg);
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.mainContent{
+	margin-top: 50px;
+}
+
+#bodyPic1 img {
+    max-width: 25%;
+    left: 0;
+	position: fixed;
+} 
+
+#bodyPic2 img {
+    max-width: 25%;
+    min-width: 24%;
+    right: 0;
+	position: fixed;
+}
+
+@media screen and (max-width: 600px) {
+    #bodyPic1 img, img {
+        display: none;
+    }
+}
+@media screen and (max-width: 600px) {
+     #bodyPic2 img, img {
+        display: none;
+    }
+}

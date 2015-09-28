@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="movApp">
+	<head>
+		<title>Chicago Park District: Movies in the Parks 2014</title>
+							<!--CDN's Used-->
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.0/angular-route.js"></script>
+							<!--CSS Files-->
+		<link rel="stylesheet" type="text/css" href="assets/css/index.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/movie.css">
+							<!--Scripts containing data model, controllers, filter, and routes-->
+		<script>
+			 var movieApp = angular.module('movApp', ['ngRoute']);
+		</script>
+        <script src="controllers/mainController.js"></script>
+        <script src="controllers/movieController.js"></script>
+                            <!--routes.js contains the controllers for login and signup pages-->
+        <script src="controllers/routes.js"></script>
+        <script src="filter/movieFilter.js"></script>
+	</head>
+	
+	<body>
+    <!--Navbar Begins-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          
+          <a class="navbar-brand" href="#/">Park District: Movies</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="">Movies <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#/child">Children Movies</a></li>
+                <li><a href="#/teen">Teen Movies</a></li>
+                <li><a href="#/all">All Movies</a></li>
+              </ul>
+            </li>
+            <li><a href="#/contact">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+            <li><a href="#/login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--Navbar Ends-->
+    
+    <!--Main Content for the website begins-->
+    <div class="row" style="margin-top:50px">   
+        <div class="col-sm-3" id="bodyPic1">
+            <img class="img-responsive img-rounded" src="assets/images/kick.jpg">
+        </div>
+    
+        <div class="col-sm-6">
+            <!--Element where views will by dynamically injected-->
+            <div ng-view></div>
+        </div>
+    
+        <div class="col-sm-3" id="bodyPic2">
+            <img class="img-responsive img-rounded" src="assets/images/brave.jpg">
+        </div>
+    </div>
+    <!--Main Content for the website ends-->
+	</body>
+</html>
